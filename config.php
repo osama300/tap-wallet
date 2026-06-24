@@ -6,8 +6,8 @@ define('TAP_API_BASE',   'https://api.tap.company/v2');
 define('TAP_CURRENCY',   'SAR');
 
 // Change this to your actual domain when deploying
-define('APP_URL', 'https://tap-wallet.test');
-// define('APP_URL', 'https://tap-wallet-dyrvzqxm.on-forge.com');
+// define('APP_URL', 'https://tap-wallet.test');
+define('APP_URL', 'https://tap-wallet-dyrvzqxm.on-forge.com');
 define('CALLBACK_URL', APP_URL . '/callback.php');
 
 define('DB_PATH', __DIR__ . '/wallet.db');
