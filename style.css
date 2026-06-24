@@ -1,0 +1,201 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #f0f4f8;
+    direction: rtl;
+    color: #1a202c;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+/* ── Wallet Card ── */
+.wallet-card {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+    color: #fff;
+    border-radius: 20px;
+    padding: 36px 32px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(37,99,235,.35);
+    margin-bottom: 28px;
+}
+
+.wallet-card .label {
+    font-size: 14px;
+    opacity: .8;
+    margin-bottom: 8px;
+    letter-spacing: .5px;
+}
+
+.wallet-card .balance {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.wallet-card .currency {
+    font-size: 22px;
+    opacity: .75;
+    margin-right: 6px;
+}
+
+.wallet-card .user-name {
+    margin-top: 16px;
+    font-size: 15px;
+    opacity: .85;
+}
+
+/* ── Charge Form ── */
+.charge-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 28px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    margin-bottom: 24px;
+}
+
+.charge-card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1e3a5f;
+}
+
+.amounts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.amount-btn {
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 14px 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s;
+    color: #2563eb;
+}
+
+.amount-btn:hover,
+.amount-btn.active {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.custom-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.custom-row input {
+    flex: 1;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color .15s;
+    text-align: right;
+}
+
+.custom-row input:focus {
+    border-color: #2563eb;
+}
+
+.btn-charge {
+    width: 100%;
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .15s, transform .1s;
+    letter-spacing: .3px;
+}
+
+.btn-charge:hover  { opacity: .92; transform: translateY(-1px); }
+.btn-charge:active { transform: translateY(0); }
+
+/* ── Alerts ── */
+.alert {
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* ── Transactions ── */
+.txn-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+}
+
+.txn-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e3a5f;
+    margin-bottom: 16px;
+}
+
+.txn-list { list-style: none; }
+
+.txn-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+.txn-item:last-child { border-bottom: none; }
+
+.txn-amount { font-weight: 700; color: #16a34a; }
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-captured  { background: #dcfce7; color: #166534; }
+.badge-pending   { background: #fef9c3; color: #854d0e; }
+.badge-failed,
+.badge-cancelled { background: #fee2e2; color: #991b1b; }
+.badge-default   { background: #f1f5f9; color: #475569; }
+
+.empty-txn {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    padding: 16px 0;
+}

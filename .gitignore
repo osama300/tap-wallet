@@ -1,0 +1,4 @@
+wallet.db
+config.php
+*.log
+.DS_Store
